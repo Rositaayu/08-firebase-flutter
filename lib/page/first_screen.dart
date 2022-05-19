@@ -1,14 +1,17 @@
 // Copyright (c) 2019 Souvik Biswas
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:job8_firebase_flutter/login_page.dart';
+import 'package:job8_firebase_flutter/page/login_page.dart';
 import 'package:job8_firebase_flutter/sign_in.dart';
 
 class FirstScreen extends StatelessWidget {
+  const FirstScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
@@ -27,8 +30,8 @@ class FirstScreen extends StatelessWidget {
                 radius: 60,
                 backgroundColor: Colors.transparent,
               ),
-              SizedBox(height: 40),
-              Text(
+              const SizedBox(height: 40),
+              const Text(
                 'NAME',
                 style: TextStyle(
                     fontSize: 15,
@@ -37,13 +40,13 @@ class FirstScreen extends StatelessWidget {
               ),
               Text(
                 name!,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 25,
                     color: Colors.deepPurple,
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 'EMAIL',
                 style: TextStyle(
                     fontSize: 15,
@@ -52,24 +55,24 @@ class FirstScreen extends StatelessWidget {
               ),
               Text(
                 email!,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 25,
                     color: Colors.deepPurple,
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               RaisedButton(
                 onPressed: () {
                   signOutGoogle();
 
                   Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(builder: (context) {
-                    return LoginPage();
+                    return const LoginPage();
                   }), ModalRoute.withName('/'));
                 },
                 color: Colors.deepPurple,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text(
                     'Sign Out',
                     style: TextStyle(fontSize: 25, color: Colors.white),
