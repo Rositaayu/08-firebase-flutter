@@ -10,6 +10,24 @@ Kelas : MI - 2C <br>
 Absen : 24
 
 ## Hasil Praktikum Firebase Flutter
-![image.png](assets/img/hasil/gambar1.jpeg) <br>
-![image.png](assets/img/hasil/gambar2.jpeg) <br>
-![image.png](assets/img/hasil/gambar3.jpeg) <br>
+### Email Sign In
+<span>
+    <img src="assets/hasil/gambar1.jpeg" width="200">
+</span>
+<span>
+    <img src="assets/hasil/gambar2.jpeg" width="200">
+</span>
+<span>
+    <img src="assets/hasil/gambar3.jpeg" width="200">
+</span>
+<span>
+    <img src="assets/hasil/gambar4.jpeg" width="200">
+</span>
+
+### Google Sign In
+<span>
+    <img src="assets/hasil/gambar5.jpeg" width="200">
+</span>
+<span>
+    <img src="assets/hasil/gambar6.jpeg" width="200">
+</span>

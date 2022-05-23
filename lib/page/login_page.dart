@@ -2,13 +2,14 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:job8_firebase_flutter/sign_in.dart';
 import 'package:job8_firebase_flutter/page/first_screen.dart';
-import 'package:job8_firebase_flutter/page/login_email.dart';
 import 'package:job8_firebase_flutter/page/home_screen.dart';
+import 'package:job8_firebase_flutter/page/login_email.dart';
+import 'package:job8_firebase_flutter/sign_in.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -26,6 +27,8 @@ class _LoginPageState extends State<LoginPage> {
             children: <Widget>[
               const FlutterLogo(size: 150),
               const SizedBox(height: 50),
+              _signInButton2(),
+              const SizedBox(height: 16),
               _signInButton(),
             ],
           ),
@@ -34,8 +37,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  // ignore: unused_element
-  Widget _signInButtonn() {
+  Widget _signInButton2() {
     return OutlineButton(
       splashColor: Colors.grey,
       onPressed: () {
@@ -71,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Image(image: AssetImage("assets/img/email.png"), height: 35.0),
+            Image(image: AssetImage("assets/email.png"), height: 35.0),
             Padding(
               padding: EdgeInsets.only(left: 10),
               child: Text(
@@ -113,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Image(image: AssetImage("assets/img/google.png"), height: 35.0),
+            Image(image: AssetImage("assets/google.png"), height: 35.0),
             Padding(
               padding: EdgeInsets.only(left: 10),
               child: Text(
@@ -130,4 +132,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-

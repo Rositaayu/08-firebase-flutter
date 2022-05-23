@@ -1,4 +1,3 @@
-// Copyright (c) 2019 Souvik Biswas
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
@@ -7,6 +6,7 @@ import 'package:job8_firebase_flutter/sign_in.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +15,10 @@ class FirstScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
-            colors: [Colors.blue, Colors.cyan],
+            colors: [
+              Color.fromARGB(255, 143, 205, 255),
+              Color.fromARGB(255, 0, 103, 188),
+            ],
           ),
         ),
         child: Center(
@@ -42,7 +45,7 @@ class FirstScreen extends StatelessWidget {
                 name!,
                 style: const TextStyle(
                     fontSize: 25,
-                    color: Colors.deepPurple,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 20),
@@ -57,20 +60,19 @@ class FirstScreen extends StatelessWidget {
                 email!,
                 style: const TextStyle(
                     fontSize: 25,
-                    color: Colors.deepPurple,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 40),
               RaisedButton(
                 onPressed: () {
                   signOutGoogle();
-
                   Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(builder: (context) {
                     return const LoginPage();
                   }), ModalRoute.withName('/'));
                 },
-                color: Colors.deepPurple,
+                color: Colors.lightBlue,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
@@ -80,7 +82,8 @@ class FirstScreen extends StatelessWidget {
                 ),
                 elevation: 5,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40)),
+                  borderRadius: BorderRadius.circular(40),
+                ),
               )
             ],
           ),

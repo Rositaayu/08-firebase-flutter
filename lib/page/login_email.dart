@@ -92,8 +92,6 @@ class _LoginEmailState extends State<LoginEmail> {
     }
 
     // Navigator.of(context) not working!
-    // ignore: prefer_typing_uninitialized_variables
-
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }
